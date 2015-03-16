@@ -1,0 +1,3 @@
+depth,file,threshold_l,threshold_u
+0.1,./BB_images/inf_singlemac.png,10,10000
+1.1,./BB_images/inf_singlemac.png,10,10000
