@@ -21,28 +21,28 @@ To run the model the folder testcases holds ~run_echoRD.py~ with a collection of
 In line with our publication, there are several tests with different level of complexity in the model. Although it refers to the same model core, especially the 1D version and the artificial macropore are very special setups.
 
 ### 1D non-linear space domain model for diffusive flux
-[echoRD 1D] holds the first testcase comparing the space domain random walk approach agains two solvers of the Richards equation and observed nocturnal diffusion. This script requires SimPEG Flow as reference model.
+[echoRD 1D](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD1D%20vs.%20obs%2C%20simpegFlow%2C%20EulerRich_fullTS_corER.ipynb) holds the first testcase comparing the space domain random walk approach agains two solvers of the Richards equation and observed nocturnal diffusion. This script requires SimPEG Flow as reference model.
 
 ### 1D echoRD for sprinkler experiment
-echoRD1D Sprinkler is adding advection to the 1D random walk which is based on observed tracer recovery profiles. Diffusive and advective flow is jointly modelled in a lumed manner. The result is, that without a criterion to stop the advection the new, advective particles simply bypass the domain sooner or later.
+[echoRD1D Sprinkler](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD1D_sprinkler.ipynb) is adding advection to the 1D random walk which is based on observed tracer recovery profiles. Diffusive and advective flow is jointly modelled in a lumed manner. The result is, that without a criterion to stop the advection the new, advective particles simply bypass the domain sooner or later.
 
 ### 2D echoRD for column experiment
-The full echoRD model was referred to an experiment with one centred "artificial macropore" (coarse sand) in a half-cylindrical sandbox (quartzite sand). 2D column trial holds a script analysing the observations from the experiment, where the "artificial macropore" was irrigated with constant flux of 3.8 l/h, and a comparative model run.
+The full echoRD model was referred to an experiment with one centred "artificial macropore" (coarse sand) in a half-cylindrical sandbox (quartzite sand). [2D column trial](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD_column_trial.ipynb) holds a script analysing the observations from the experiment, where the "artificial macropore" was irrigated with constant flux of 3.8 l/h, and a comparative model run.
 
 ### 2D echoRD Weiherbach
-The full echoRD model requires data about macropore depth and density distribution. In order to reduce the effect of preprocessing we set up a run based on observed macropore settings in the Weiherbach basin (the observations are converted into horizontal images which are then interpreted by the preprocessor). ~echoRD2D_sprinkler_Weiherbach~ holds the model setup for the testcase recalculating a sprinkler experiment.
+The full echoRD model requires data about macropore depth and density distribution. In order to reduce the effect of preprocessing we set up a run based on observed macropore settings in the Weiherbach basin (the observations are converted into horizontal images which are then interpreted by the preprocessor). [echoRD2D sprinkler Weiherbach](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD2D_sprinkler_Weiherbach.ipynb) holds the model setup for the testcase recalculating a sprinkler experiment.
 
 ### 2D echoRD Process Hypotheses
-The echoRD model has several process hypotheses for infiltration, advective velocity definition, macropore-matrix exchange and flow in the macropores. While all alternative hypotheses are included in the model (controlled by respective flags) the script ~echoRD2D_sprinkler_Weiherbach_Comparison~ reads the results of all combinations and compares them.
+The echoRD model has several process hypotheses for infiltration, advective velocity definition, macropore-matrix exchange and flow in the macropores. While all alternative hypotheses are included in the model (controlled by respective flags) the script [echoRD2D sprinkler Weiherbach Comparison](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD2D_sprinkler_Weiherbach_Comparison.ipynb) reads the results of all combinations and compares them.
 
 ### 2D echoRD Noised Ks
-It is well known that local heterogeneity of pedo-physical properties may emerge local disequilibrium and preferential processes. We used the Weiherbach setup and imposed a noised saturated hydraulic conductivity as primary control for diffusive soil water dynamics in the range of observed variance. ~ echoRD2D_sprinkler_Weiherbach_noiseKs~ presents the respective model setup.
+It is well known that local heterogeneity of pedo-physical properties may emerge local disequilibrium and preferential processes. We used the Weiherbach setup and imposed a noised saturated hydraulic conductivity as primary control for diffusive soil water dynamics in the range of observed variance. [echoRD2D sprinkler Weiherbach noiseKs](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD2D_sprinkler_Weiherbach-noiseKs.ipynb) presents the respective model setup.
 
 ### 2D echoRD Attert
-In the northern Attert basin sprinkler experiments revealed a complex geogene macropore setting in young soils on periglacial deposits. Based on field and laboratory analyses the echoRD model is also initialised with photos of excavated horizontal dye stains in different depths. ~echoRD_sprinkler_Attert~ holds the model setup for the testcase recalculating the sprinkler experiment in a less well-defined setting.
+In the northern Attert basin sprinkler experiments revealed a complex geogene macropore setting in young soils on periglacial deposits. Based on field and laboratory analyses the echoRD model is also initialised with photos of excavated horizontal dye stains in different depths. [echoRD2D sprinkler Colpach](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/echoRD2D_sprinkler_Colpach.ipynb) holds the model setup for the testcase recalculating the sprinkler experiment in a less well-defined setting.
 
 ## General Helpers
-Since the model includes a preprocessor the script ~Preprocessing~ is intended to help the setup for any other plot. Please note, that I use pickle to store the setups for further usage.
+Since the model includes a preprocessor the script [Preprocessing](http://nbviewer.ipython.org/github/cojacoo/echoRD_model/blob/master/testcases/Preprocessing.ipynb) is intended to help the setup for any other plot. Please note, that I use pickle to store the setups for further usage.
 
 ### In case of any questions, pls. feel free to ask.
 
